@@ -26,7 +26,8 @@ fetch('podcast.xml')
         let num_comentarios = posts[i].querySelector("num_comentarios").textContent;
         let num_megusta = posts[i].querySelector("num_megusta").textContent;
         let imagen = posts[i].querySelector("imagen").textContent;
-        contenidohtml += '<li>${autor}${introduccion}${descripcion}${tieompo_lectura}${num_visualizaciones}${num_comentarios}${num_megusta}${imagen}</li>';
+        console.log('autor: ',autor, 'introduccion: ', introduccion, 'descripcion: ', descripcion, 'tiempo_lectura: ', tiempo_lectura, 'mum_visualizaciones: ', num_visualizaciones, 'num_comentarios: ', num_comentarios, 'num_megusta: ', num_megusta, 'imagen: ',imagen)
+        contenidohtml += '<li><p>Autor: ${autor}</p><p>Introduccion: ${introduccion}</p><p>Descripcion: ${descripcion}</p><p>Tiempo: ${tiempo_lectura}</p><p>Num_visitas: ${num_visualizaciones}</p><p>Num_comentarios: ${num_comentarios}</p><p>Num_megusta: ${num_megusta}</p><p>Imagen: ${imagen}</p></li>';
     }
     contenidohtml += '<ul>';
     document.getElementById('contenido').innerHTML = contenidohtml;
